@@ -22,3 +22,4 @@ class Zoo
 
     public function vendreBillet(array $visiteurs) {}
 }
+
