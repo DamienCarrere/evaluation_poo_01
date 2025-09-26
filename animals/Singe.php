@@ -1,4 +1,5 @@
 <?php
+require_once "../animal.php";
 
 class Singe extends Animal
 {
