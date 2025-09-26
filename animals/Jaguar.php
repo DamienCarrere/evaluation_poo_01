@@ -1,13 +1,13 @@
 <?php
 require_once(__DIR__ . "/../animal.php");
 
-class Lion extends Animal
+class Jaguar extends Animal
 {
 
     public function __construct($name = "Valentin")
     {
 
-        parent::__construct($name, "lion", "carnivore");
+        parent::__construct($name, "jaguar", "carnivore");
     }
     public function faireLeShow()
     {
