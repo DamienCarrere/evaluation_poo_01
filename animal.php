@@ -1,13 +1,13 @@
 <?php
 
-class Animal
+abstract class Animal
 {
 
     protected string $name;
     protected string $species;
     protected string $diet;
 
-    public function __construct(string $name, string $species, string $diet)
+    public function __construct(string $name = "Valentin", string $species, string $diet)
     {
 
         $this->name = $name;
@@ -20,23 +20,23 @@ class Animal
         return $this->name;
     }
 
-    public function getspecies()
+    public function getSpecies()
     {
         return $this->species;
     }
 
-    public function getdiet()
+    public function getDiet()
     {
         return $this->diet;
     }
 
-    public function faireLeShow()
-    {
-        echo "Cet animal " . $this->diet . " qui est un " . $this->species . " et qui s'appelle " . $this->name . " fait le show!";
-    }
+
+    abstract public function faireLeShow();
+
 
     public function donnerNaissance()
     {
-        echo "DONNE NAISSANCE"; // A MODIFIER
+        $babyName = "bébé_" . $this->getSpecies() . "_numero_" . rand(1, 5000);
+        return new static($babyName, $this->getSpecies(), $this->getDiet()); // A MODIFIER
     }
 }
