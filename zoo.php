@@ -61,7 +61,7 @@ class Zoo
                 $animal->faireLeShow();
             }
 
-            if ($i == $milieuVisiteurs && $contraceptionForcée === false) {
+            if ($i + 1 == $milieuVisiteurs && $contraceptionForcée === false) {
                 $baby = $this->nouvelleNaissance($this->animaux[1]);
                 $contraceptionForcée = true;
                 echo "<p>-=/><\=-=/><\=-=/><\=-=/><\=-=/><\=-=/><\=-=/><\=-=/><\=-=/><\=-<p>";
